@@ -1,5 +1,4 @@
 import os
-
 def save_to_csv(df, table_name, is_processed=False):
     # Define the folder path based on whether the data is raw or processed
     folder_path = 'data/processed_data' if is_processed else 'data/raw_data'
@@ -9,7 +8,7 @@ def save_to_csv(df, table_name, is_processed=False):
         os.makedirs(folder_path)
 
     # Define the complete file path
-    file_path = os.path.join(folder_path, f'{table_name}.csv')
+    file_path = os.path.join(folder_path, f'{table_name}')
     
     # Check if the file already exists
     if not os.path.exists(file_path):

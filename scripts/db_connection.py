@@ -1,4 +1,10 @@
 import pyodbc
+import pandas as pd
+import sys
+import os
+# Add the config directory to the system path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'config')))
+
 import config  # Import configuration file for DB credentials
 
 class DatabaseConnection:
